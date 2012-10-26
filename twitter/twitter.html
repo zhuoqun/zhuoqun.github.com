@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Twitter</title>
+    <meta name="description" content="立即和你最重要的事物联系。关注你的朋友，专家，最爱名人和突发新闻。" />
+    <link rel="stylesheet" href="assets/css/twitter.css" type="text/css" media="screen" />
+    <script src="assets/js/jquery-1.7.1.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="doc">
+      <div class="topbar">
+        <div class="global-nav">
+          <div class="global-nav-inner">
+            <div class="container">
+
+              <ul class="nav">
+                <li class="home">
+                <a href="#"><span><i class="nav-home-logged-out"></i></span></a>
+                </li>
+              </ul>
+
+              <ul class="nav secondary-nav session-dropdown" id="session">
+                <li class="dropdown js-session">
+                <a class="dropdown-toggle dropdown-signin" id='signin-link' href="#">
+                  <small>已有账号?</small> 登录 <span class="caret"></span>
+                </a>
+                <a class="dropdown-signup" id="signup-link" href="#">
+                  <small>新来 Twitter?</small><span class="emphasize"> 现在就加入 &raquo;</span>
+                </a>
+                <ul class="dropdown-menu dropdown-form" id="signin-dropdown">
+                  <li class="dropdown-caret right">
+                  <span class="caret-outer"></span>
+                  <span class="caret-inner"></span>
+                  </li>
+                  <li>
+                  <form action="" class="js-signin signin" method="post">
+                    <fieldset class="textbox">
+                      <label class="username js-username">
+                        <span>用户名或电子邮件地址</span>
+                        <input class="js-username-field email-input" type="text" value="" name="session[username_or_email]" autocomplete="on">
+                      </label>
+                      <label class="password js-password">
+                        <span>密码</span>
+                        <input class="js-password-field" type="password" value="" name="session[password]">
+                      </label>
+                    </fieldset>
+                    <fieldset class="subchck">
+                      <label class="remember">
+                        <input type="checkbox" value="1" name="remember_me">
+                        <span>记住我</span>
+                      </label>
+                      <button type="submit" class="btn submit">登录</button>
+                    </fieldset>
+                    <div class="divider"></div>
+                    <p>
+                    <a class="forgot" href="/account/resend_password">忘记密码?</a><br />
+                    <a class="mobile has-sms" href="/account/complete">已经在使用短信版 Twitter?</a>
+                    </p>
+                  </form>
+                  </li>
+                </ul>
+                </li>
+              </ul>
+
+              <ul class="nav secondary-nav language-dropdown">
+                <li class="dropdown js-language-dropdown">
+                <a class="dropdown-toggle" href="javascript:;">
+                  <small>语言:</small>
+                  <span class="js-current-language">简体中文</span>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-caret right">
+                  <span class="caret-outer"></span>
+                  <span class="caret-inner"></span>
+                  </li>
+                  <li><a href="/?lang=id" data-lang-code="id" title="印尼语" class="js-language-link">Bahasa Indonesia</a></li>
+                  <li><a href="/?lang=msa" data-lang-code="msa" title="马来语" class="js-language-link">Bahasa Melayu</a></li>
+                  <li><a href="/?lang=da" data-lang-code="da" title="丹麦语" class="js-language-link">Dansk</a></li>
+                  <li><a href="/?lang=de" data-lang-code="de" title="德语" class="js-language-link">Deutsch</a></li>
+                  <li><a href="/?lang=en" data-lang-code="en" title="英语" class="js-language-link">English</a></li>
+                  <li><a href="/?lang=es" data-lang-code="es" title="西班牙语" class="js-language-link">Español</a></li>
+                  <li><a href="/?lang=fil" data-lang-code="fil" title="菲律宾语" class="js-language-link">Filipino</a></li>
+                  <li><a href="/?lang=it" data-lang-code="it" title="意大利语" class="js-language-link">Italiano</a></li>
+                  <li><a href="/?lang=hu" data-lang-code="hu" title="匈牙利语" class="js-language-link">Magyar</a></li>
+                  <li><a href="/?lang=nl" data-lang-code="nl" title="荷兰语" class="js-language-link">Nederlands</a></li>
+                  <li><a href="/?lang=no" data-lang-code="no" title="挪威语" class="js-language-link">Norsk</a></li>
+                  <li><a href="/?lang=pl" data-lang-code="pl" title="波兰语" class="js-language-link">Polski</a></li>
+                  <li><a href="/?lang=pt" data-lang-code="pt" title="葡萄牙语" class="js-language-link">Português</a></li>
+                  <li><a href="/?lang=fi" data-lang-code="fi" title="芬兰语" class="js-language-link">Suomi</a></li>
+                  <li><a href="/?lang=sv" data-lang-code="sv" title="瑞典语" class="js-language-link">Svenska</a></li>
+                  <li><a href="/?lang=tr" data-lang-code="tr" title="土耳其语" class="js-language-link">Türkçe</a></li>
+                  <li><a href="/?lang=fr" data-lang-code="fr" title="法语" class="js-language-link">français</a></li>
+                  <li><a href="/?lang=ru" data-lang-code="ru" title="俄语" class="js-language-link">Русский</a></li>
+                  <li><a href="/?lang=he" data-lang-code="he" title="希伯来语" class="js-language-link">עִבְרִית</a></li>
+                  <li><a href="/?lang=ur" data-lang-code="ur" title="乌尔都语" class="js-language-link">اردو</a></li>
+                  <li><a href="/?lang=ar" data-lang-code="ar" title="阿拉伯语" class="js-language-link">العربية</a></li>
+                  <li><a href="/?lang=fa" data-lang-code="fa" title="波斯语" class="js-language-link">فارسی</a></li>
+                  <li><a href="/?lang=hi" data-lang-code="hi" title="印地语" class="js-language-link">हिन्दी</a></li>
+                  <li><a href="/?lang=th" data-lang-code="th" title="Thai" class="js-language-link">ภาษาไทย</a></li>
+                  <li><a href="/?lang=ja" data-lang-code="ja" title="日语" class="js-language-link">日本語</a></li>
+                  <li><a href="/?lang=zh-tw" data-lang-code="zh-tw" title="繁体中文" class="js-language-link">繁體中文</a></li>
+                  <li><a href="/?lang=ko" data-lang-code="ko" title="朝鲜语
+                    " class="js-language-link">한국어</a></li>
+                </ul>
+                </li>
+              </ul>
+
+              <div class="pull-right">
+                <form class="form-search js-search-form" action="/search" autocomplete="off" id="global-nav-search">
+                  <span class="search-icon js-search-action">
+                    <i class="nav-search"></i>
+                  </span>
+                  <input class="search-input" type="text" id="search-query" placeholder="搜索" name="q">
+                  <div class="dropdown-menu typeahead js-global-nav-dropdown">
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div><!-- #topbar -->
+
+      <div id="page-outer">
+        <div class="front-container" id="front-container">
+
+          <div class="front-card">
+            <div class="front-welcome">
+              <div class="front-welcome-text">
+                <h1>欢迎来到 Twitter。</h1>
+                <p>与你关心的人们一起，探寻变化的大千世界。</p>
+              </div>
+            </div><!-- #front-welcome -->
+
+            <div class="front-signin js-front-signin">
+              <form action="" class="signin" method="post">
+                <div class="placeholding-input username">
+                  <input type="text" class="text-input email-input" name="session[username_or_email]" title="用户名或电子邮件地址" autocomplete="on">
+                  <span class="placeholder">用户名或电子邮件地址</span>
+                </div>
+
+                <table class="flex-table password-signin">
+                  <tbody>
+                    <tr>
+                      <td class="flex-table-primary">
+                        <div class="placeholding-input password flex-table-form">
+                          <input type="password" class="text-input flex-table-input" name="session[password]" title="密码">
+                          <span class="placeholder">密码</span>
+                        </div>
+                      </td>
+                      <td class="flex-table-secondary">
+                        <input type="submit" class="submit btn primary-btn flex-table-btn js-submit" value="登录">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="remember-forgot">
+                  <label class="remember">
+                    <input type="checkbox" value="1" name="remember_me">
+                    <span>记住我</span>
+                  </label>
+                  <span class="separator">&middot;</span>
+                  <a class="forgot" href="/account/resend_password">忘记密码?</a>
+                </div>
+              </form>
+            </div><!-- #front-signin -->
+
+            <div class="front-signup js-front-signup">
+              <h2><strong>新来 Twitter?</strong> 注册</h2>
+
+              <form action="" class="signup" method="post">
+                <div class="placeholding-input">
+                  <input type="text" class="text-input" autocomplete="off" name="user[name]" maxlength="20">
+                  <span class="placeholder">全名</span>
+                </div>
+                <div class="placeholding-input">
+                  <input type="text" class="text-input email-input" autocomplete="off" name="user[email]">
+                  <span class="placeholder">电子邮件地址</span>
+                </div>
+                <div class="placeholding-input">
+                  <input type="password" class="text-input" name="user[user_password]">
+                  <span class="placeholder">密码</span>
+                </div>
+
+                <input type="submit" class="btn signup-btn" value="注册 Twitter">
+              </form>
+            </div><!-- #front-signup -->
+          </div><!-- #front-card -->
+
+          <div class="footer inline-list">
+            <ul>
+              <li><a href="/about">关于</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="//support.twitter.com">帮助</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="http://blog.twitter.com">博客</a><span class="dot divider"> &middot;</span></li>
+
+
+              <li><a href="/download">移动设备</a><span class="dot divider"> &middot;</span></li>
+
+
+              <li><a href="http://status.twitter.com">服务器状态</a><span class="dot divider"> &middot;</span></li>
+
+              <li><a href="/jobs">工作机会</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="/tos">服务条款</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="/privacy">隐私</a><span class="dot divider"> &middot;</span></li>
+
+
+
+              <li><a href="//business.twitter.com/zh-cn/advertise/start">广告商</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="//business.twitter.com/index_zh-cn.html">企业</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="http://media.twitter.com">媒体</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="//dev.twitter.com">开发者</a><span class="dot divider"> &middot;</span></li>
+              <li><a href="/about/resources">资源</a><span class="dot divider"> &middot;</span></li>
+              <li><span class="copyright">&copy; 2012 Twitter</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#search-query').focus(function(){
+        $('.js-search-action').addClass('focus');
+      }).blur(function(){
+        $('.js-search-action').removeClass('focus');
+      });
+
+      $('.dropdown-toggle').click(function(e){
+        e.preventDefault();
+        $(this).parent().toggleClass('open');
+      });
+
+      $('.placeholding-input .placeholder').click(function(e){
+        e.preventDefault();
+        $(this).prev().focus();
+      });
+    });
+  </script>
+
+  </body>
+</html>
