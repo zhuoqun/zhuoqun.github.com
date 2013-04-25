@@ -71,7 +71,7 @@ $(document).ready(function () {
         if (tmp.count) {
           node.append('<li><span>' + tmp.word + '</span> x ' + tmp.count + '</li>');
         } else {
-          node.append('<li><span>' + tmp.word + '</span> > ' + tmp.percent + ' %</li>');
+          node.append('<li><span>' + tmp.word + '</span> ' + tmp.percent + ' %</li>');
         }
       }
     } else {
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
   $('#startCheck').click(function (e) {
     e.preventDefault();
-    var text = articleInput.val().trim(), result, i, tmp;
+    var text = $.trim(articleInput.val()), result, i, tmp;
     if (text.length <= 0) {
       return;
     }
