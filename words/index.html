@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>中文词语检查器</title>
+
+  <link rel="stylesheet" href="assets/css/foundation.min.css" />
+  <link rel="stylesheet" href="assets/css/typo.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <h1 id="title">中文词语检查器 <span id="tagline">帮你写出好的中文</span></h1>
+    </div>
+  </div>
+
+  <div id="inputWrap">
+    <div class="row">
+      <div class="small-12 columns">
+        <form>
+          <legend>请在文本框中输入你的文章：</legend>
+          <textarea id="articleInput"></textarea>
+        </form>
+      </div>
+    </div>
+    <div class="row controls">
+      <div class="small-10 columns">
+        <label for="redMode"><input id="redMode" type="checkbox"> 公务员模式</label>
+      </div>
+      <div class="small-2 columns">
+        <button id="startCheck" class="button expand">开始检查</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="resultWrap" class="hide">
+    <div class="row">
+
+      <div class="small-8 columns show-red show-ugly" id="output"></div>
+
+      <div class="small-4 columns text-right sidebar">
+        <label><input class="toggleCtrl" data-class="show-red" type="checkbox" checked="checked"> 八股词语</label>
+        <label><input class="toggleCtrl" data-class="show-ugly" type="checkbox" checked="checked"> 丑陋词语</label>
+
+        <div id="stats" class="show-red show-ugly">
+          <div id="redWords">
+            <h2>八股词语统计</h2>
+            <ul></ul>
+          </div>
+
+          <div id="uglyWords">
+            <h2>丑陋词语统计</h2>
+            <ul></ul>
+          </div>
+        </div>
+
+        <button id="reInput" class="button">重新输入</button>
+
+      </div>
+    </div>
+    <div class="row">
+    </div>
+  </div>
+
+
+  <div class="row" id="ft">
+    <div class="small-8 columns">
+      <p><a target="_blank" href="https://github.com/zhuoqun/words_inspector">查看源码和词典</a></p>
+    </div>
+    <div class="small-4 columns text-right">
+      <p><a target="_blank" href="">关于中文词语检查器</a></p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/red_words.js"></script>
+  <script type="text/javascript" src="assets/js/ugly_words.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>

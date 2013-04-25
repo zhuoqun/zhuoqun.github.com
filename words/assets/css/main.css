@@ -1,0 +1,64 @@
+#title {
+  font-size: 1.8em;
+  margin: 1em 0;
+}
+
+#tagline {
+  font-size: 14px;
+  color: #666;
+  margin-left: 1em;
+}
+
+#articleInput {
+  width: 100%;
+  height: 400px;
+  margin: .5em 0 1em;
+  padding: .5em;
+}
+
+.controls label, .controls input {
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+
+#ft {
+  margin: 6em auto 2em;
+}
+
+#output p {
+  margin-bottom: 1.25em;
+}
+
+.show-red span.red, .show-ugly span.ugly {
+  font-size: 1.1em;
+  padding: 0 4px;
+}
+
+.show-red span.red, #redWords span {
+  color: red;
+}
+
+.show-ugly span.ugly, #uglyWords span {
+  color: blue;
+}
+
+.sidebar h2 {
+  font-size: 1.2em;
+  margin: 1.4em 0 .5em;
+}
+
+.sidebar label {
+  display: inline;
+}
+
+.show-red #redWords, .show-ugly #uglyWords {
+  display: block;
+}
+
+#redWords, #uglyWords {
+  display: none;
+}
+
+#reInput {
+  margin-top: 2em;
+}
